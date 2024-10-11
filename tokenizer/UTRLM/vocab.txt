@@ -1,0 +1,10 @@
+<pad>
+<eos>
+<unk>
+A
+G
+C
+T
+<cls>
+<mask>
+<sep>
