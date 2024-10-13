@@ -1,9 +1,10 @@
 # LAMAR
 A Foundation Language Model for Multilayer Regulation of RNA
 
-This repository contains code and pre-trained weights for RNA foundation language model **LAMAR**. La Morena outperformed benchmark models in various RNA regulation tasks, helping to decipher the regulation rules of RNA.  
+This repository contains code and pre-trained weights for RNA foundation language model **LAMAR**. LAMAR outperformed benchmark models in various RNA regulation tasks, helping to decipher the regulation rules of RNA.  
 
 La Morena was developed by Rnasys Lab and Bio-Med Big Data Center, Shanghai Institute of Nutrition and Health (SINH), Chinese Academy of Sciences (CAS).
+<img width="1615" alt="fig 1" src="https://github.com/user-attachments/assets/fc38d130-7a59-4cd8-88bb-e1cc0a2da7bf">
 
 ## Citation
 
@@ -13,7 +14,7 @@ The environments are a little different on different devices. **The unified envi
 Pretraining environment:   
     A800: environment_A800_pretrain.yml  
 Fine-tuning environment:   
-    Sugon Z-100: environment_Z100_finetune.yml
+    Sugon Z-100: environment_Z100_finetune.yml  
     V100(ppc64le): environment_V100_finetune.yml
 
 ### Required packages
