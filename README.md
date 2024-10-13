@@ -1,7 +1,7 @@
-# La-Morena
+# LAMAR
 A Foundation Language Model for Multilayer Regulation of RNA
 
-This repository contains code and pre-trained weights for RNA foundation language model **La Morena**. La Morena outperformed benchmark models in various RNA regulation tasks, helping to decipher the regulation rules of RNA.  
+This repository contains code and pre-trained weights for RNA foundation language model **LAMAR**. La Morena outperformed benchmark models in various RNA regulation tasks, helping to decipher the regulation rules of RNA.  
 
 La Morena was developed by Rnasys Lab and Bio-Med Big Data Center, Shanghai Institute of Nutrition and Health (SINH), Chinese Academy of Sciences (CAS).
 
