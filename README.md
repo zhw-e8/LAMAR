@@ -38,7 +38,8 @@ device = torch.device("cuda:0")
 # instance tokenizer and config
 tokenizer = AutoTokenizer.from_pretrained("tokenizer/single_nucleotide/", model_max_length=model_max_length)
 config = AutoConfig.from_pretrained(
-    "config/config_150M.json", vocab_size=len(tokenizer), pad_token_id=tokenizer.pad_token_id, mask_token_id=tokenizer.mask_token_id, token_dropout=False, positional_embedding_type='rotary', 
+    "config/config_150M.json", vocab_size=len(tokenizer), pad_token_id=tokenizer.pad_token_id,
+    mask_token_id=tokenizer.mask_token_id, token_dropout=False, positional_embedding_type='rotary', 
     hidden_size=768, intermediate_size=3072, num_attention_heads=12, num_hidden_layers=12
 )
 # intance the model and load pretrained weights
