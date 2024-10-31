@@ -26,6 +26,8 @@ pandas >= 2.0.3
 safetensors >= 0.4.1  
 
 ## Usage
+### Download pretrained weights
+The pretrained weights can be downloaded from https://huggingface.co/zhw-e8/LAMAR/tree/main.
 
 ### Compute embeddings
 ```python
@@ -71,9 +73,14 @@ The paths of scripts:
 
 ### Predict splice sites from pre-mRNA sequences
 
-### Predict the translation efficiency of mRNAs based on 5' UTRs (HEK293 cell line)
+### Predict the translation efficiencies of mRNAs based on 5' UTRs (HEK293 cell line)
 The paths of scripts:   
   Fine-tune: src/UTR5TEPred/Timothy/finetune/finetune.ipynb  
   Evaluate: src/UTR5TEPred/Timothy/finetune/evaluate.ipynb
 
-### Predict the half-time of mRNAs based on 3' UTRs (cell line)
+### Annotate the IRES
+
+### Predict the half-lives of mRNAs based on 3' UTRs (cell line)
+The paths of scripts:   
+  Fine-tune: src/UTR3DegPred/DavidErle/finetune/finetune.ipynb  
+  Evaluate: src/UTR3DegPred/DavidErle/finetune/evaluate.ipynb
