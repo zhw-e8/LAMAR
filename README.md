@@ -26,6 +26,12 @@ pandas >= 2.0.3
 safetensors >= 0.4.1  
 
 ## Usage
+### Install package
+From github
+```shell
+cd ./LAMAR
+pip install .
+```
 ### Download pretrained weights
 The pretrained weights can be downloaded from https://huggingface.co/zhw-e8/LAMAR/tree/main.
 
