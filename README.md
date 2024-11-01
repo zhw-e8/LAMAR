@@ -3,7 +3,7 @@ A Foundation **La**nguage **M**odel for RN**A** **R**egulation
 
 This repository contains codes and links of pre-trained weights for RNA foundation language model **LAMAR**. LAMAR outperformed benchmark models in various RNA regulation tasks, helping to decipher the regulation rules of RNA.  
 
-La Morena was developed by Rnasys Lab and Bio-Med Big Data Center, Shanghai Institute of Nutrition and Health (SINH), Chinese Academy of Sciences (CAS).  
+LAMAR was developed by Rnasys Lab and Bio-Med Big Data Center, Shanghai Institute of Nutrition and Health (SINH), Chinese Academy of Sciences (CAS).  
 ![image](./ReadMe/overview.png)
 
 ## Citation
@@ -81,12 +81,14 @@ The paths of scripts:
 
 ### Predict the translation efficiencies of mRNAs based on 5' UTRs (HEK293 cell line)
 The paths of scripts:   
+  Tokenization:   
   Fine-tune: src/UTR5TEPred/Timothy/finetune/finetune.ipynb  
   Evaluate: src/UTR5TEPred/Timothy/finetune/evaluate.ipynb
 
 ### Annotate the IRES
 
-### Predict the half-lives of mRNAs based on 3' UTRs (cell line)
+### Predict the half-lives of mRNAs based on 3' UTRs (BEAS-2B cell line)
 The paths of scripts:   
+  Tokenization: src/UTR3DegPred/DavidErle/process_data/tokenize_data.ipynb  
   Fine-tune: src/UTR3DegPred/DavidErle/finetune/finetune.ipynb  
   Evaluate: src/UTR3DegPred/DavidErle/finetune/evaluate.ipynb
