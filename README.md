@@ -39,6 +39,7 @@ The pretrained weights can be downloaded from https://huggingface.co/zhw-e8/LAMA
 ```python
 from LaMorena.modeling_nucESM2 import EsmModel
 from transformers import AutoConfig, AutoTokenizer
+from safetensors.torch import load_file, load_model
 import torch
 
 
