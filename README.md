@@ -39,9 +39,11 @@ The pretrained weights can be downloaded from https://huggingface.co/zhw-e8/LAMA
 ```python
 from LaMorena.modeling_nucESM2 import EsmModel
 from transformers import AutoConfig, AutoTokenizer
+import torch
 
 
 seq = "ATACGATGCTAGCTAGTGACTAGCTGATCGTAGCTG"
+model_max_length = 1026
 device = torch.device("cuda:0")
 # instance tokenizer and config
 tokenizer = AutoTokenizer.from_pretrained("tokenizer/single_nucleotide/", model_max_length=model_max_length)
