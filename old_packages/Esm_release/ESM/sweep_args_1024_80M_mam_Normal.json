@@ -1,0 +1,73 @@
+{
+    "tokenizer_args": {
+        "tokenizer_path": "ESM/tokenizer",
+        "model_max_length": 1026
+    }, 
+    "configs_args":{
+        "model_configs_path": "ESM/configs_1024_80M.json",
+        "positional_embedding_type": "rotary",
+        "token_dropout": false,
+        "nlabels": 3,
+        "method": "cls"
+    },
+    "train_dataloader_args":{
+        "preload_data": "ESM/datas/trainset_split_768_int16",
+        "set_path": "ESM/datas/trainset_split_768_int16.json",
+        "seed":42,
+        "test_size":0.1
+    },
+    "test_dataloader_args":{
+        "preload_data": "ESM/datas/testset_split_768_int16",
+        "set_path": "ESM/datas/testset_split_768_int16.json"
+    },
+    "model_args":{
+        "pretrain_state_path": "",
+        "pretrain_freeze":false
+    },
+    "metric_args":{
+        "methods": {
+            "accuracy":{},
+            "precision":{
+                "average":"macro", 
+                "zero_division":0
+            },
+            "recall":{
+                "average":"macro" 
+            },
+            "f1":{
+                "average":"macro"
+            },
+            "matthews_correlation":{
+                "average":"macro"
+            },
+            "topk":{},
+            "roc_auc":{
+	    	"multi_class":"ovr",
+                "average":"macro"
+	    },
+            "pr_auc":{}
+            }
+    },
+    "train_args":{
+        "per_device_train_batch_size": 16,
+        "per_device_eval_batch_size": 16,
+	"save_total_limit":20,
+        "learning_rate": 1e-4,
+        "warmup_ratio": 0.01,
+        "num_train_epochs": 4,
+        "max_grad_norm": 1,
+        "gradient_accumulation_steps": 2,
+        "output_dir": "results/sweep_1024_80M_Mam",
+        "logging_steps": 50,
+        "dataloader_drop_last":true,
+        "weight_decay":0.01, 
+        "adam_beta1":0.9, 
+        "adam_beta2":0.98, 
+        "adam_epsilon":1e-8,
+        "evaluation_strategy":"epoch",
+        "save_strategy":"epoch", 
+        "logging_strategy" : "steps",
+        "disable_tqdm":false,
+        "resume_from_checkpoint":true
+    }
+}

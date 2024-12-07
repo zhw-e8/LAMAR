@@ -1,0 +1,10 @@
+{
+    "accuracy":"default",
+    "recall":"default",
+    "f1":"default",
+    "precision":"default",
+    "matthews_correlation":"default",
+    "roc_auc":"multiclass",
+    "topk":"multiclass",
+    "pr_auc":"multiclass"
+}

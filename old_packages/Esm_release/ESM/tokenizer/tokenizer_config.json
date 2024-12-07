@@ -1,0 +1,5 @@
+{
+  "clean_up_tokenization_spaces": true,
+  "model_max_length": 1026,
+  "tokenizer_class": "EsmTokenizer"
+}
