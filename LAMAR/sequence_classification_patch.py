@@ -5,7 +5,7 @@ from torch.nn import CrossEntropyLoss, MSELoss
 import torch.nn.functional as F
 from transformers.modeling_outputs import SequenceClassifierOutput
 import math
-from LaMorena.modeling_nucESM2 import EsmModel
+from LAMAR.modeling_nucESM2 import EsmModel
 
 
 def gelu(x):

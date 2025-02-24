@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-from LaMorena.modeling_nucESM2 import RotaryEmbedding
+from LAMAR.modeling_nucESM2 import RotaryEmbedding
 from typing import List, Optional, Tuple, Union
 from flash_attn.flash_attention import FlashAttention
 
