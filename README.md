@@ -37,7 +37,7 @@ The pretrained weights can be downloaded from https://huggingface.co/zhw-e8/LAMA
 
 ### Compute embeddings
 ```python
-from LaMorena.modeling_nucESM2 import EsmModel
+from LAMAR.modeling_nucESM2 import EsmModel
 from transformers import AutoConfig, AutoTokenizer
 from safetensors.torch import load_file, load_model
 import torch
@@ -81,17 +81,24 @@ The paths of scripts:
     Compute embeddings of splice sites: src/embedding/SpliceSiteEmbedding.ipynb  
 
 ### Predict splice sites from pre-mRNA sequences
+The paths of scripts:  
+    Tokenization: src/SpliceSitePred/tokenize_data.ipynb  
+    Fine-tune: src/SpliceSitePred/finetune.ipynb
 
 ### Predict the translation efficiencies of mRNAs based on 5' UTRs (HEK293 cell line)
 The paths of scripts:   
-  Tokenization:   
-  Fine-tune: src/UTR5TEPred/Timothy/finetune/finetune.ipynb  
-  Evaluate: src/UTR5TEPred/Timothy/finetune/evaluate.ipynb
+  Tokenization: src/UTR5TEPred/tokenize_data.ipynb  
+  Fine-tune: src/UTR5TEPred/finetune.ipynb  
+  Evaluate: src/UTR5TEPred/evaluate.ipynb  
 
 ### Annotate the IRES
-
-### Predict the half-lives of mRNAs based on 3' UTRs (BEAS-2B cell line)
+The paths of scripts:  
+  Tokenization: src/IRESPred/tokenize_data.ipynb  
+  Fine-tune: src/IRESPred/finetune.ipynb  
+  Evaluate: src/IRESPred/evaluate.ipynb  
+  
+### Predict the half-lives of mRNAs based on 3' UTRs (BEAS-2B cell line)  
 The paths of scripts:   
-  Tokenization: src/UTR3DegPred/DavidErle/process_data/tokenize_data.ipynb  
-  Fine-tune: src/UTR3DegPred/DavidErle/finetune/finetune.ipynb  
-  Evaluate: src/UTR3DegPred/DavidErle/finetune/evaluate.ipynb
+  Tokenization: src/UTR3DegPred/tokenize_data.ipynb  
+  Fine-tune: src/UTR3DegPred/finetune.ipynb  
+  Evaluate: src/UTR3DegPred/evaluate.ipynb  
