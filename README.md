@@ -4,7 +4,7 @@ A Foundation **La**nguage **M**odel for RN**A** **R**egulation
 This repository contains codes and links of pre-trained weights for RNA foundation language model **LAMAR**. LAMAR outperformed benchmark models in various RNA regulation tasks, helping to decipher the regulation rules of RNA.  
 
 LAMAR was developed by Rnasys Lab and Bio-Med Big Data Center, Shanghai Institute of Nutrition and Health (SINH), Chinese Academy of Sciences (CAS).  
-![image](./ReadMe/overview.png)
+![image](./ReadMe/Fig 1.png)
 
 ## Citation
 https://www.biorxiv.org/content/10.1101/2024.10.12.617732v1
