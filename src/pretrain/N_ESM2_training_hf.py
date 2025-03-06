@@ -76,12 +76,12 @@ def main(
         save_steps=save_steps, 
         logging_steps=logging_steps, 
         fp16=fp16,  
+        half_precision_backend='apex',
+        fp16_opt_level='O2',
         dispatch_batches=False, 
         ignore_data_skip=True, 
         report_to='none'
     )
-    # half_precision_backend='apex',
-    # fp16_opt_level='O2',
     # Trainer
     trainer = Trainer(
         model=model,
@@ -96,9 +96,9 @@ def main(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Nucleotide ESM2 training')
-    parser.add_argument('--tokenizer_path', default='/public/home/zhouhw/zhouhanwen/nucTran/tokenizer/single_nucleotide', type=str, help='Directory of tokenizer')
+    parser.add_argument('--tokenizer_path', default='tokenizer/single_nucleotide', type=str, help='Directory of tokenizer')
     parser.add_argument('--model_max_length', default=1026, type=int, help='Model input size')
-    parser.add_argument('--model_name', default="/public/home/zhouhw/zhouhanwen/nucTran/config/config_8M.json", type=str, help='Name of training model')
+    parser.add_argument('--model_name', default="config/config_8M.json", type=str, help='Name of training model')
     parser.add_argument('--token_dropout', action='store_true', help='Token dropout')
     parser.add_argument('--positional_embedding_type', default="rotary", type=str, help='Positional embedding type rotary or absolute')
     parser.add_argument('--hidden_size', type=int, help='Hidden size of token')
