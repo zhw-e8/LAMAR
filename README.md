@@ -102,3 +102,6 @@ The paths of scripts:
   Tokenization: src/UTR3DegPred/tokenize_data.ipynb  
   Fine-tune: src/UTR3DegPred/finetune.ipynb  
   Evaluate: src/UTR3DegPred/evaluate.ipynb  
+
+## Baseline methods
+The performance of LAMAR was compared to baseline methods. The scripts: https://github.com/zhw-e8/LAMAR_baselines
