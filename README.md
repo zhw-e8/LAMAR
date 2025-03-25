@@ -7,7 +7,8 @@ LAMAR was developed by Rnasys Lab and Bio-Med Big Data Center, Shanghai Institut
 ![image](./ReadMe/overview.png)
 
 ## Citation
-https://www.biorxiv.org/content/10.1101/2024.10.12.617732v1
+https://www.biorxiv.org/content/10.1101/2024.10.12.617732v2
+
 ## Environment
 The pretraining was conducted on A800 80GB graphic process units, and the fine-tuning was conducted on the Sugon Z-100 16GB and Tesla V100 32GB clusters of graphic process units.  
 The environments are a little different on different devices. **The unified environment will be developed.**   
