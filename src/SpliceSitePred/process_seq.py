@@ -40,8 +40,8 @@ def label_seq(strand, tx_start, tx_end, exon_starts, exon_ends, method):
             ss3s = tx_end - exon_ends
             ss5s = tx_end - exon_starts
     label = np.zeros(seq_len)
-    label[ss5s] = 1
-    label[ss3s] = 2
+    label[ss5s] = 2
+    label[ss3s] = 1
     return label
 
 
@@ -91,7 +91,7 @@ def split_seq(seq, label, pred_len, flank_len):
         sub_label = label[starts[i]:ends[i]].copy()
         sub_label[0:flank_len] = -100
         sub_label[-flank_len:] = -100
-        sub_label = list(map(int, list(sub_label))) # Transform np.float to int, because json does not support np.int
+        sub_label = [-100] + list(map(int, list(sub_label))) + [-100] # Transform np.float to int, because json does not support np.int
         sub_seqs.append(sub_seq)
         sub_labels.append(sub_label)
     return sub_seqs, sub_labels
@@ -129,6 +129,5 @@ def process_seq(fa_path, info_path, json_path, method, pred_len=768, flank_len=1
         for j in range(len(sub_seqs)):
             result = {'seq': sub_seqs[j], 'label': sub_labels[j]}
             results.append(result)
-    with open(json_path, 'w') as fo:
-        json_file = json.dumps(results)
-        fo.write(json_file)
+    with open(json_path, 'w', encoding='utf-8') as fo:
+        json.dump(results, fo, separators=[',', ':'])
