@@ -9,9 +9,19 @@ LAMAR was developed by Rnasys Lab and Bio-Med Big Data Center, Shanghai Institut
 ## Citation
 https://www.biorxiv.org/content/10.1101/2024.10.12.617732v2
 
-## Environment
-The pretraining was conducted on A800 80GB graphic process units, and the fine-tuning was conducted on the Sugon Z-100 16GB and Tesla V100 32GB clusters of graphic process units.  
-The environments are a little different on different devices. **The unified environment will be developed.**   
+## Create environment
+The environment can be created with `LAMAR_requirements.txt`.  
+```shell
+git clone https://github.com/zhw-e8/LAMAR.git
+cd ./LAMAR
+
+conda create -n lamar python==3.11
+conda activate lamar
+pip install -r LAMAR_requirements.txt
+```
+
+The pretraining was conducted on A800 80GB GPUs, and the fine-tuning was conducted on the Sugon Z-100 16GB and Tesla V100 32GB clusters of GPUs.  
+The environments are a little different on different devices.   
 Pretraining environment:   
     A800: environment_A800_pretrain.yml  
 Fine-tuning environment:   
@@ -30,7 +40,6 @@ safetensors >= 0.4.1
 ### Install package
 From github
 ```shell
-cd ./LAMAR
 pip install .
 ```
 ### Download pretrained weights
