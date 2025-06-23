@@ -38,7 +38,7 @@ safetensors >= 0.4.1
 
 ## Usage
 ### Install package
-From github
+After creating the environment, LAMAR package can be installed.  
 ```shell
 pip install .
 ```
@@ -94,6 +94,7 @@ The paths of scripts:
 The paths of scripts:  
     Tokenization: src/SpliceSitePred/tokenize_data.ipynb  
     Fine-tune: src/SpliceSitePred/finetune.ipynb
+    Evaluate: src/SpliceSitePred/evaluation.ipynb
 
 ### Predict the translation efficiencies of mRNAs based on 5' UTRs (HEK293 cell line)
 The paths of scripts:   
