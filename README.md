@@ -46,6 +46,7 @@ pip install .
 The pretrained weights can be downloaded from https://huggingface.co/zhw-e8/LAMAR/tree/main.
 
 ### Compute embeddings
+Notice: In our model, the tokenizer, config and pretrained weights should be loaded locally. So, we encourage the users to specify the absolute path or ensure the correct relative path is used.  
 ```python
 from LAMAR.modeling_nucESM2 import EsmModel
 from transformers import AutoConfig, AutoTokenizer
