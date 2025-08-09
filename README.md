@@ -87,34 +87,34 @@ with torch.no_grad():
 ```
 
 In our paper, we compared the embeddings of necleotides, functional elements and transcripts from pretrained and untrained LAMAR. The paths of scripts are as followed:     
-    Compute embeddings of nucleotides: src/embedding/NucleotideEmbeddingMultipleTimes.ipynb  
-    Compute embeddings of functional elements: src/embedding/FunctionalElementEmbedding.ipynb  
-    Compute embeddings of transcripts: src/embedding/RNAEmbedding.ipynb  
-    Compute embeddings of splice sites: src/embedding/SpliceSiteEmbedding.ipynb  
+* Compute embeddings of nucleotides: src/embedding/NucleotideEmbeddingMultipleTimes.ipynb  
+* Compute embeddings of functional elements: src/embedding/FunctionalElementEmbedding.ipynb  
+* Compute embeddings of transcripts: src/embedding/RNAEmbedding.ipynb  
+* Compute embeddings of splice sites: src/embedding/SpliceSiteEmbedding.ipynb  
 
 ### Predict splice sites from pre-mRNA sequences
 The paths of scripts:  
-    Tokenization: src/SpliceSitePred/tokenize_data.ipynb  
-    Fine-tune: src/SpliceSitePred/finetune.ipynb  
-    Evaluate: src/SpliceSitePred/evaluation.ipynb
+* Tokenization: src/SpliceSitePred/tokenize_data.ipynb  
+* Fine-tune: src/SpliceSitePred/finetune.ipynb  
+* Evaluate: src/SpliceSitePred/evaluation.ipynb
 
 ### Predict the translation efficiencies of mRNAs based on 5' UTRs (HEK293 cell line)
 The paths of scripts:   
-  Tokenization: src/UTR5TEPred/tokenize_data.ipynb  
-  Fine-tune: src/UTR5TEPred/finetune.ipynb  
-  Evaluate: src/UTR5TEPred/evaluate.ipynb  
+* Tokenization: src/UTR5TEPred/tokenize_data.ipynb  
+* Fine-tune: src/UTR5TEPred/finetune.ipynb  
+* Evaluate: src/UTR5TEPred/evaluate.ipynb  
 
 ### Annotate the IRES
 The paths of scripts:  
-  Tokenization: src/IRESPred/tokenize_data.ipynb  
-  Fine-tune: src/IRESPred/finetune.ipynb  
-  Evaluate: src/IRESPred/evaluate.ipynb  
+* Tokenization: src/IRESPred/tokenize_data.ipynb  
+* Fine-tune: src/IRESPred/finetune.ipynb  
+* Evaluate: src/IRESPred/evaluate.ipynb  
   
 ### Predict the half-lives of mRNAs based on 3' UTRs (BEAS-2B cell line)  
 The paths of scripts:   
-  Tokenization: src/UTR3DegPred/tokenize_data.ipynb  
-  Fine-tune: src/UTR3DegPred/finetune.ipynb  
-  Evaluate: src/UTR3DegPred/evaluate.ipynb  
+* Tokenization: src/UTR3DegPred/tokenize_data.ipynb  
+* Fine-tune: src/UTR3DegPred/finetune.ipynb  
+* Evaluate: src/UTR3DegPred/evaluate.ipynb  
 
 ## Baseline methods
 The performance of LAMAR was compared to baseline methods. The scripts: https://github.com/zhw-e8/LAMAR_baselines
