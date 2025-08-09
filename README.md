@@ -21,12 +21,12 @@ pip install -r LAMAR_requirements.txt
 ```
 
 The pretraining was conducted on A800 80GB GPUs, and the fine-tuning was conducted on the Sugon Z-100 16GB and Tesla V100 32GB clusters of GPUs.  
-The environments are a little different on different devices.   
+The environments are a little different on different devices. And now the unified environment is provided.       
 Pretraining environment:   
     A800: environment_A800_pretrain.yml  
 Fine-tuning environment:   
     Sugon Z-100: environment_Z100_finetune.yml  
-    V100(ppc64le): environment_V100_finetune.yml
+    V100 (ppc64le): environment_V100_finetune.yml
 
 ### Required packages
 accelerate >= 0.26.1  
@@ -85,7 +85,8 @@ with torch.no_grad():
     )
     embedding = outputs.last_hidden_state[0, 1 : -1, :]
 ```
-The paths of scripts:   
+
+In our paper, we compared the embeddings of necleotides, functional elements and transcripts from pretrained and untrained LAMAR. The paths of scripts are as followed:     
     Compute embeddings of nucleotides: src/embedding/NucleotideEmbeddingMultipleTimes.ipynb  
     Compute embeddings of functional elements: src/embedding/FunctionalElementEmbedding.ipynb  
     Compute embeddings of transcripts: src/embedding/RNAEmbedding.ipynb  
@@ -94,7 +95,7 @@ The paths of scripts:
 ### Predict splice sites from pre-mRNA sequences
 The paths of scripts:  
     Tokenization: src/SpliceSitePred/tokenize_data.ipynb  
-    Fine-tune: src/SpliceSitePred/finetune.ipynb
+    Fine-tune: src/SpliceSitePred/finetune.ipynb  
     Evaluate: src/SpliceSitePred/evaluation.ipynb
 
 ### Predict the translation efficiencies of mRNAs based on 5' UTRs (HEK293 cell line)
